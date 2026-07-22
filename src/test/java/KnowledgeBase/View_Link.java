@@ -3,13 +3,15 @@ package KnowledgeBase;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Add_File {
+public class View_Link {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -30,12 +32,19 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
-		Thread.sleep(1000);
+		
 		// Click on the knowledge base
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[2]/div/button[1]"))).click();
 		
-		// Click on the add file button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[1]/div[2]/div[2]/div[2]/label"))).click();
+		// Locate the whole file card
+				WebElement fileCard=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[2]/div/div/div")));
+
+				// Hover over the file card
+				Actions actions = new Actions(driver);
+				actions.moveToElement(fileCard).perform();
+				
+				// click to open the link
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[2]/div/div/div/div[1]"))).click();
 
 	}
 

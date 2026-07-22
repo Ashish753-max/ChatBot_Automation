@@ -1,4 +1,4 @@
-package KnowledgeBase;
+package Email_Setting;
 
 import java.time.Duration;
 
@@ -7,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Add_File {
+public class Delete_Company {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -30,12 +30,15 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
-		Thread.sleep(1000);
-		// Click on the knowledge base
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[2]/div/button[1]"))).click();
 		
-		// Click on the add file button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[1]/div[2]/div[2]/div[2]/label"))).click();
+		// Click on the email setting
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[3]/div/button[2]"))).click();
+		
+		// Click on the delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[2]/div[3]/table/tbody/tr[1]/td[4]/button"))).click();
+		
+		// Click on the confirm delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div/div[2]/button[2]"))).click();
 
 	}
 

@@ -1,4 +1,4 @@
-package KnowledgeBase;
+package Scopes;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Add_File {
+public class Create_System {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -30,12 +30,13 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
-		Thread.sleep(1000);
-		// Click on the knowledge base
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[2]/div/button[1]"))).click();
+		Thread.sleep(2000);
 		
-		// Click on the add file button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[1]/div[2]/div[2]/div[2]/label"))).click();
+		// Click on the Scopes
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[4]/div/button[1]"))).click();
+		
+		// click on the Add system button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/button"))).click();
 
 	}
 
