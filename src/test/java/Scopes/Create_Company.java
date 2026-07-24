@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_System {
+public class Create_Company {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -35,14 +35,18 @@ ChromeDriver driver = new ChromeDriver();
 		// Click on the Scopes
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[4]/div/button[1]"))).click();
 		
-		// click on the Add system button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/button"))).click();
+		// click on the Add company button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/button"))).click();
 		
-		// Enter the system name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/input[1]"))).sendKeys("SimpleCRS");
+		// enter id
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/input[1]"))).sendKeys("1234");
+		
+		// enter name
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/input[2]"))).sendKeys("Travelmatic");
 		
 		// Click on the save button
-        		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/button[1]"))).click();
+
 	}
 
 }

@@ -36,13 +36,13 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[3]/div/button[2]"))).click();
 		
 		// enter the company id 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[2]/div[1]/div/div[1]/input"))).sendKeys("1234");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[2]/div[1]/div/div[1]/input"))).sendKeys("1234");
 		
 		// enter the company name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[2]/div[1]/div/div[2]/input"))).sendKeys("NTV");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[2]/div[1]/div/div[2]/input"))).sendKeys("NTV");
 		
 		// Enter system name 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[2]/div[1]/div/div[3]/input"))).sendKeys("Travelmatic");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[2]/div[1]/div/div[3]/input"))).sendKeys("Travelmatic");
 		
 		// Click on the register button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[2]/div[1]/div/button"))).click();

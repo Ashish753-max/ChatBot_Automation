@@ -1,4 +1,4 @@
-package Scopes;
+package UserContactTable;
 
 import java.time.Duration;
 
@@ -7,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_System {
+public class ExportJson_Data {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -30,19 +30,18 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
-		Thread.sleep(2000);
 		
-		// Click on the Scopes
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[4]/div/button[1]"))).click();
+		// Click on the user contact table
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[5]/div/button[3]"))).click();
 		
-		// click on the Add system button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/button"))).click();
+		// click on the export data button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div/div[2]/table/tbody/tr[1]/td[7]/div/div/button"))).click();
 		
-		// Enter the system name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/input[1]"))).sendKeys("SimpleCRS");
+		// click on the export json button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div/div[2]/table/tbody/tr[1]/td[7]/div/div/div[2]/button[1]"))).click();
 		
-		// Click on the save button
-        		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/button"))).click();
+		
+
 	}
 
 }

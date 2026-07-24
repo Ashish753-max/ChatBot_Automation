@@ -1,4 +1,4 @@
-package Scopes;
+package Email_Setting;
 
 import java.time.Duration;
 
@@ -7,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_System {
+public class Registered_Sessions_SystemFilter {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -30,19 +30,13 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
-		Thread.sleep(2000);
 		
-		// Click on the Scopes
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[4]/div/button[1]"))).click();
+		// Click on the email setting
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[3]/div/button[2]"))).click();
 		
-		// click on the Add system button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/button"))).click();
-		
-		// Enter the system name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/input[1]"))).sendKeys("SimpleCRS");
-		
-		// Click on the save button
-        		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/div[1]/form/button"))).click();
+		// enter the system name
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[4]/div[2]/table/thead/tr[2]/td[1]/input"))).sendKeys("SimpleCRS");
+
 	}
 
 }
