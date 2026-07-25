@@ -1,0 +1,10 @@
+package DatabaseVisibility;
+
+public class Search_Tables {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
