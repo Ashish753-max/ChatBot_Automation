@@ -1,4 +1,4 @@
-package DatabaseVisibility;
+package Session;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Edit_Table {
+public class Admin_LoginDetails {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -31,11 +31,11 @@ ChromeDriver driver = new ChromeDriver();
 		// Click on the login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/form/button"))).click();
 		
-		// Click on the Data Base Visibility
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[4]/div/button[4]"))).click();
+		// Click on the Sessions
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/nav/div[5]/div/button[2]"))).click();
 		
-		// Click on the edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[2]/div[2]/table/tbody/tr[1]/td[6]/div/button[1]"))).click();
+		// Click on the Admin Login Details
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div[2]/button[2]"))).click();
 
 	}
 
