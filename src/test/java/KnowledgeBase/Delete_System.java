@@ -7,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Add_Link {
+public class Delete_System {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -34,17 +34,11 @@ ChromeDriver driver = new ChromeDriver();
 		// Click on the knowledge base
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[2]/div/button[1]"))).click();
 		
-		// Click on the add link button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/main/div[1]/div[2]/div[2]/div[3]/button[2]"))).click();
+		// Click on the delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/aside/div[2]/div[2]/div[1]/div/button[2]"))).click();
 		
-		// Enter the link 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[1]/div[3]/div/div/div/input"))).sendKeys("https://docs.google.com/document/d/1DJovQlx7fRYLihY5rkajYwxUnwD2TeEPp1zwqlyv00U/edit?tab=t.0");
-		
-		Thread.sleep(1000);
-		
-		//click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/main/div[1]/div[3]/div/button"))).click();
-		
+		// Click on the confirm delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div/div[2]/div[2]/button[2]"))).click();
 
 	}
 

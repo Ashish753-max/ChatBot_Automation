@@ -35,8 +35,8 @@ ChromeDriver driver = new ChromeDriver();
 		// Click on the knowledge Explorer
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/nav/div[2]/div/button[2]"))).click();
 		
-		// Enter the search query
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div/div/main/div/div[3]/div[1]/div[1]/input"))).sendKeys("vdr_working_group");
+		// click on the view chunks 
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[1]/div/main/div/div[3]/div[2]/table/tbody/tr[1]/td[6]/div/button[2]"))).click();
 
 	}
 
